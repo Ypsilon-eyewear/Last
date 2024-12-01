@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Luxury Eyewear</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1 class="logo">Ypsilon Eyewear</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Welcome to Ypsilon Eyewear</h2>
+            <p>Discover the best luxury eyewear with cutting-edge technology for perfect vision.</p>
+            <a href="#products" class="cta-btn">Explore Our Collection</a>
+        </div>
+    </section>
+    
+    <section id="products">
+        <div class="container">
+            <h2>Our Products</h2>
+            <div class="product-gallery">
+                <div class="product-item">
+                    <img src="img/product1.jpg" alt="Eyewear 1">
+                    <p>Elegant Eyewear 1</p>
+                </div>
+                <div class="product-item">
+                    <img src="img/product2.jpg" alt="Eyewear 2">
+                    <p>Luxury Eyewear 2</p>
+                </div>
+                <div class="product-item">
+                    <img src="img/product3.jpg" alt="Eyewear 3">
+                    <p>Modern Eyewear 3</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-item">
+            <h3>Virtual Try-On</h3>
+            <p>Try our eyewear virtually before buying.</p>
+        </div>
+        <div class="service-item">
+            <h3>Face Shape Analysis</h3>
+            <p>Get personalized eyewear recommendations based on your face shape.</p>
+        </div>
+        <div class="service-item">
+            <h3>Eye Exam Booking</h3>
+            <p>Book a consultation with an optometrist for a comprehensive eye exam.</p>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="submit_form.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Ypsilon Eyewear | All rights reserved</p>
+    </footer>
+</body>
+</html>
