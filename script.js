@@ -1,54 +1,35 @@
-// Example of JavaScript for the luxury eyewear website
-
-document.addEventListener("DOMContentLoaded", function () {
-    // Handle the language switcher logic
-    const languageSwitcher = document.getElementById('language-switcher');
-    languageSwitcher.addEventListener('change', function() {
-        const selectedLanguage = languageSwitcher.value;
-        changeLanguage(selectedLanguage);
+// Smooth scrolling for navigation links
+document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", function(e) {
+        e.preventDefault();
+        const section = document.querySelector(this.getAttribute("href"));
+        section.scrollIntoView({ behavior: "smooth" });
     });
+});
 
-    // Function to change the language of the page
-    function changeLanguage(language) {
-        // Logic to change the content language, e.g., using JSON files or directly modifying content
-        if (language === 'en') {
-            // English content logic
-            console.log("Switched to English");
-        } else if (language === 'ar') {
-            // Arabic content logic
-            console.log("Switched to Arabic");
-        } else if (language === 'de') {
-            // German content logic
-            console.log("Switched to German");
-        } else if (language === 'cz') {
-            // Czech content logic
-            console.log("Switched to Czech");
-        }
-        // You can use dynamic translation tools like Google Translate API or other methods.
-    }
+// Dynamic welcome message based on time of day
+const welcomeMessage = document.querySelector("#welcome-section p");
+const currentHour = new Date().getHours();
 
-    // Handle form submission for contact or consultation
-    const contactForm = document.getElementById('contact-form');
-    contactForm.addEventListener('submit', function(event) {
-        event.preventDefault();  // Prevent the form from refreshing the page
-        const formData = new FormData(contactForm);
-        // Send the data to the server or use it for processing
-        console.log("Form submitted", formData);
-        alert("Thank you for contacting us!");
-    });
+if (currentHour >= 5 && currentHour < 12) {
+    welcomeMessage.textContent = "Good morning! Start your day with the perfect eyewear.";
+} else if (currentHour >= 12 && currentHour < 18) {
+    welcomeMessage.textContent = "Good afternoon! Explore our exclusive collection.";
+} else {
+    welcomeMessage.textContent = "Good evening! Discover luxury eyewear for every occasion.";
+}
 
-    // Scroll-to-top button functionality
-    const scrollToTopButton = document.getElementById('scroll-to-top');
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 300) {
-            scrollToTopButton.style.display = 'block';
-        } else {
-            scrollToTopButton.style.display = 'none';
-        }
-    });
+// Button click effect (example for try-on glasses button)
+document.querySelector("#virtual-tryon .cta-button").addEventListener("click", function() {
+    alert("This feature is under development! Stay tuned.");
+});
 
-    scrollToTopButton.addEventListener('click', function() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-    
+// Placeholder for language change feature
+const changeLanguage = (language) => {
+    alert(`Language switched to . This feature is coming soon!`);
+};
+
+// Example usage (can be linked to a dropdown in the navigation)
+document.querySelector("nav").addEventListener("dblclick", () => {
+    changeLanguage("Arabic"); // Replace with logic to select the desired language
 });
